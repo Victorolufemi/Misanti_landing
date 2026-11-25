@@ -134,8 +134,8 @@ export function TimeCollapse({ from, to }: { from: string; to: string }) {
   return (
     <span className={`collapse ${on ? "on" : ""}`}>
       <span className="collapse-from">{from}</span>
+      {" "}
       <span className="collapse-to">
-        {" "}
         to <em>{to}</em>.
       </span>
     </span>
@@ -153,7 +153,8 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
       {items.map((it, i) => {
         const isOpen = open === i;
         return (
-          <div className={`faq-item reveal ${isOpen ? "open" : ""}`} key={it.q}>
+          <div className="reveal" key={it.q}>
+          <div className={`faq-item ${isOpen ? "open" : ""}`}>
             <button
               type="button"
               className="faq-q"
@@ -171,6 +172,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
               </div>
             </div>
           </div>
+          </div>
         );
       })}
     </div>
@@ -187,7 +189,8 @@ export function VideoFrame() {
   const isFile = /\.(mp4|webm|mov)(\?|$)/i.test(url);
 
   return (
-    <div className={`video reveal ${playing ? "playing" : ""}`}>
+    <div className="reveal video-reveal">
+    <div className={`video ${playing ? "playing" : ""}`}>
       <span className="corner tl" />
       <span className="corner tr" />
       <span className="corner bl" />
@@ -218,6 +221,7 @@ export function VideoFrame() {
           <span className="video-cap">{url ? "Watch · 1 min" : "Video coming soon"}</span>
         </button>
       )}
+    </div>
     </div>
   );
 }

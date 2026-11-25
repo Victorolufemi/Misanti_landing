@@ -146,7 +146,7 @@ export function WaitlistForm({ source, autoFocus }: { source: string; autoFocus?
         <span>{pending ? "Saving your spot…" : "Join the waitlist"}</span>
       </button>
       <p className="wl-fine">
-        It takes a minute and costs nothing. {cta.line1} {cta.line2}
+        It takes a minute and costs nothing. {cta.line1}
       </p>
     </form>
   );

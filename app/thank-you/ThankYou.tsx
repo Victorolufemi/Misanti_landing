@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Countdown, MotionInit } from "@/components/Interactive";
 import { Wordmark } from "@/components/Wordmark";
-import { contact, cta, thankYou, whatsappLink } from "@/lib/content";
+import { contact, thankYou, whatsappLink } from "@/lib/content";
 
 export function ThankYou() {
   const [who, setWho] = useState<{ firstName: string; email: string } | null>(null);
@@ -90,11 +90,6 @@ export function ThankYou() {
             ))}
           </ol>
           <Countdown compact />
-        </div>
-
-        <div className="ty-block reveal">
-          <span className="eyebrow">Your 72-hour promise</span>
-          <p>{cta.line2}</p>
         </div>
 
         <div className="ty-block reveal">

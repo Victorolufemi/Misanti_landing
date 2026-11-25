@@ -81,7 +81,6 @@ function Hero() {
       <div className="hero-glow" aria-hidden="true" />
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <span className="eyebrow reveal">{hero.eyebrow}</span>
           <h1 className="reveal">
             <span className="strike">DMing 20 photographers on IG</span> just to know their price is a{" "}
             <em>waste of time.</em>
@@ -209,7 +208,7 @@ function Tried() {
             <li className="tried-row reveal" key={it.title}>
               <span className="tried-n">{String(i + 1).padStart(2, "0")}</span>
               <h3>
-                <span className="x-through">{it.title}</span>
+                {it.title}
               </h3>
               <p>{it.body}</p>
               <span className="tried-x" aria-hidden="true">
